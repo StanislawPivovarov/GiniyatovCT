@@ -1,15 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {styles} from "./src/style/style"
+import { View, Text } from 'react-native';
+import {styles} from "../../style/style"
 
-export default function App() {
+export default function Catalog() {
   return (
     <View style={styles.container}>
       <Text>
-        Это точка входа.
+        Это страница каталога
       </Text>
       <StatusBar style="auto" />
     </View>
   );
 }
-
