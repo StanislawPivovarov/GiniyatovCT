@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "giniyatovct-app",
-    "slug": "giniyatovct-app",
+    "slug": "giniyatov",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "245728ab-45b8-4021-9d6a-44cd3a8cfcd3"
+      }
+    },
+    "owner": "photovarov.dev"
   }
 }

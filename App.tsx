@@ -1,15 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Loading from './src/screens/Loading';
+import NetworkError from './src/screens/NetworkError';
 import {styles} from "./src/style/style"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>
-        Это точка входа.
-      </Text>
+    <SafeAreaView style={styles.container}>
+      <NetworkError/>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
