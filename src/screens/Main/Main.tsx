@@ -8,6 +8,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Navigator } from "../../navigation/Navigator";
 import React from "react";
 import img from '../../assets/bannerexample.png'
+import ItemCard from "../../components/ItemCard";
+import { Link } from "@react-navigation/native";
 
 export default function Main() {
   const Tab = createBottomTabNavigator();
@@ -17,20 +19,19 @@ export default function Main() {
       <View style={mainStyles.header}>
         <View style={mainStyles.adress}>
           <View>
-            <Text style={{ fontSize: 24 }}>
-              Ваш адрес доставки <EnvironmentOutlined />
+            <Text style={mainStyles.adressHeader}>
+              Ваш адрес доставки <EnvironmentOutlined style={mainStyles.adressIcon} />
             </Text>
-            <Text style={{ fontSize: 20, textDecorationLine: "underline" }}>
+            <Link to={'./'} style={mainStyles.link}>
               Кремлевская, д. 35
-            </Text>
+            </Link>
           </View>
           <View>
-            <SearchOutlined style={{ fontSize: 30 }} />
+            <SearchOutlined style={mainStyles.searchButton} />
           </View>
         </View>
       </View>
-      <Text>Акции</Text>
-      <Carousel style={{height: 200}}>
+      <Carousel style={{height: 210, width: '100%'}}>
            <View style={{width: 'max-content', marginHorizontal: 'auto', marginTop: '20px'}}>
           <Image style={{height: "180px", width: "360px", margin: '0 auto'}} source={require('../../assets/bannerexample.png')}/>
            </View>
@@ -51,6 +52,23 @@ export default function Main() {
            </View>
            <View style={{width: 'max-content', marginHorizontal: 'auto', marginTop: '20px'}}>
           <Image style={{height: "180px", width: "360px", margin: '0 auto'}} source={require('../../assets/bannerexample.png')}/>
+           </View>
+        </Carousel>
+        <Text>Товары месяца</Text>
+        <Carousel style={{height: 220}}>
+           <View style={{width: '100%', marginHorizontal: 'auto', marginTop: '20px', flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <ItemCard
+          name="Конго органик"
+          category="кофе арабика"
+          price="1200"
+          weight="100гр."
+          />
+          <ItemCard
+          name="Конго неорганик"
+          category="кофе арабика"
+          price="1200"
+          weight="100гр."
+          />
            </View>
         </Carousel>
       <StatusBar style="auto" />
